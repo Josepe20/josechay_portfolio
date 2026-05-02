@@ -106,6 +106,30 @@
   }
 
   /**
+   * Calculate profile age from birth date
+   */
+  function calculateAge(dateOfBirth) {
+    const birthDate = new Date(`${dateOfBirth}T00:00:00`);
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const hasBirthdayPassed =
+      today.getMonth() > birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+    if (!hasBirthdayPassed) {
+      age -= 1;
+    }
+
+    return age;
+  }
+
+  const profileAge = document.querySelector('#profile-age[data-birth-date]');
+  if (profileAge) {
+    profileAge.textContent = calculateAge(profileAge.dataset.birthDate);
+  }
+
+  /**
    * Initiate Pure Counter
    */
   new PureCounter();
