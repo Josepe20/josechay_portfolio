@@ -130,6 +130,50 @@
   }
 
   /**
+   * Submit contact form through Web3Forms
+   */
+  document.querySelectorAll('.web3forms-form').forEach(function(contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const loading = contactForm.querySelector('.loading');
+      const errorMessage = contactForm.querySelector('.error-message');
+      const sentMessage = contactForm.querySelector('.sent-message');
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const formData = new FormData(contactForm);
+
+      loading.classList.add('d-block');
+      errorMessage.classList.remove('d-block');
+      sentMessage.classList.remove('d-block');
+      submitButton.disabled = true;
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          loading.classList.remove('d-block');
+
+          if (data.success) {
+            sentMessage.classList.add('d-block');
+            contactForm.reset();
+          } else {
+            throw new Error(data.message || 'Form submission failed. Please try again.');
+          }
+        })
+        .catch(error => {
+          loading.classList.remove('d-block');
+          errorMessage.textContent = error.message;
+          errorMessage.classList.add('d-block');
+        })
+        .finally(() => {
+          submitButton.disabled = false;
+        });
+    });
+  });
+
+  /**
    * Initiate Pure Counter
    */
   new PureCounter();
