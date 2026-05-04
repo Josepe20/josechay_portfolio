@@ -43,6 +43,24 @@
       }
     });
 
+    document.querySelectorAll("[data-i18n-href]").forEach(function(element) {
+      const key = element.getAttribute("data-i18n-href");
+      const translation = getTranslation(language, key);
+
+      if (translation !== undefined) {
+        element.setAttribute("href", translation);
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-download]").forEach(function(element) {
+      const key = element.getAttribute("data-i18n-download");
+      const translation = getTranslation(language, key);
+
+      if (translation !== undefined) {
+        element.setAttribute("download", translation);
+      }
+    });
+
     if (typeof window.portfolioRefreshTyped === "function") {
       window.portfolioRefreshTyped();
     }
