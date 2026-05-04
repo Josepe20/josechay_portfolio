@@ -92,11 +92,21 @@
   /**
    * Init typed.js
    */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
+  let typedInstance;
+
+  function initTyped() {
+    const selectTyped = document.querySelector('.typed');
+    if (!selectTyped) {
+      return;
+    }
+
+    if (typedInstance) {
+      typedInstance.destroy();
+    }
+
     let typed_strings = selectTyped.getAttribute('data-typed-items');
     typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
+    typedInstance = new Typed('.typed', {
       strings: typed_strings,
       loop: true,
       typeSpeed: 100,
@@ -104,6 +114,9 @@
       backDelay: 2000
     });
   }
+
+  initTyped();
+  window.portfolioRefreshTyped = initTyped;
 
   /**
    * Calculate profile age from birth date

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -26,14 +26,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -60,12 +52,13 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-briefcase-fill navicon"></i> Services</a></li>
-        <li><a href="#testimonials"><i class="bi bi-people navicon"></i> Testimonials</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="#" id="languageToggle"><i class="bi bi-translate navicon"></i><span data-i18n="nav.language">English</span></a></li>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span data-i18n="nav.home">Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> <span data-i18n="nav.about">About</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> <span data-i18n="nav.portfolio">Portfolio</span></a></li>
+        <li><a href="#services"><i class="bi bi-briefcase-fill navicon"></i> <span data-i18n="nav.services">Services</span></a></li>
+        <li><a href="#testimonials"><i class="bi bi-people navicon"></i> <span data-i18n="nav.testimonials">Testimonials</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> <span data-i18n="nav.contact">Contact</span></a></li>
       </ul>
     </nav>
 
@@ -81,7 +74,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Jose Chay</h2>
-        <p>I'm <span class="typed" data-typed-items="Full-stack Developer, Freelancer"></span></p>
+        <p><span data-i18n="hero.prefix">I'm</span> <span class="typed" data-i18n-typed-items="hero.typedItems" data-typed-items="Full-stack Developer, Freelancer"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -91,7 +84,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
+        <h2 data-i18n="about.title">About</h2>
         <p></p>
       </div><!-- End Section Title -->
 
@@ -102,30 +95,30 @@
             <img src="assets/img/profile_chay.jpg" class="img-fluid" alt="Jose Chay">
           </div>
           <div class="col-lg-8 content">
-            <h2>Fullstack Python Developer</h2>
+            <h2 data-i18n="about.role">Fullstack Developer</h2>
             <p class="fst-italic py-3">
-              I am a Software Developer, Constantly acquiring new skills
+              <span data-i18n="about.subtitle">I am a Software Developer, Constantly acquiring new skills</span>
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>2 Aug 2002</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://josechay.com" target="_blank" rel="noopener noreferrer">josechay.com</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Guatemala City, Guatemala</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.birthdayLabel">Birthday:</strong> <span data-i18n="about.birthdayValue">2 Aug 2002</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.websiteLabel">Website:</strong> <span><a href="https://josechay.com" target="_blank" rel="noopener noreferrer">josechay.com</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.cityLabel">City:</strong> <span data-i18n="about.cityValue">Guatemala City, Guatemala</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="profile-age" data-birth-date="2002-08-02"></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Resume:</strong> <span><a href="assets/files/jose_resume.pdf" download="jose_resume.pdf"> Download CV</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.ageLabel">Age:</strong> <span id="profile-age" data-birth-date="2002-08-02"></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.resumeLabel">Resume:</strong> <span><a href="assets/files/jose_resume.pdf" download="jose_resume.pdf" data-i18n="about.downloadCv"> Download CV</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.freelanceLabel">Freelance:</strong> <span data-i18n="about.freelanceValue">Available</span></li>
                 </ul>
               </div>
             </div>
             <p class="py-3">
-              Totally passionate about science and engineering.
+              <span data-i18n="about.passion">Totally passionate about science and engineering.</span>
             </p>
-            <p>
+            <p data-i18n="about.description">
               Over the past 3 years, I have worked on web development projects focused on building practical,
               maintainable solutions for real business needs. I enjoy turning ideas into reliable digital products,
               improving existing systems, and collaborating with clients who need clear technical execution.
@@ -148,7 +141,7 @@
             <div class="stats-item">
               <i class="bi bi-emoji-smile"></i>
               <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong></p>
+              <p><strong data-i18n="stats.clients">Happy Clients</strong></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -156,7 +149,7 @@
             <div class="stats-item">
               <i class="bi bi-journal-richtext"></i>
               <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong></p>
+              <p><strong data-i18n="stats.projects">Projects</strong></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -164,7 +157,7 @@
             <div class="stats-item">
               <i class="bi bi-headset"></i>
               <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong></p>
+              <p><strong data-i18n="stats.support">Hours Of Support</strong></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -172,7 +165,7 @@
             <div class="stats-item">
               <i class="bi bi-people"></i>
               <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong></p>
+              <p><strong data-i18n="stats.workers">Hard Workers</strong></p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -187,8 +180,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>A collection of all projects done by me or in collaboration with a team</p>
+        <h2 data-i18n="portfolio.title">Portfolio</h2>
+        <p data-i18n="portfolio.description">A collection of all projects done by me or in collaboration with a team</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -196,11 +189,11 @@
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-web">Web</li>
-            <li data-filter=".filter-data">Data Science</li>
-            <li data-filter=".filter-auto">Automation</li>
-            <li data-filter=".filter-gui">Mobile Apps</li>
+            <li data-filter="*" class="filter-active" data-i18n="portfolio.filterAll">All</li>
+            <li data-filter=".filter-web" data-i18n="portfolio.filterWeb">Web</li>
+            <li data-filter=".filter-data" data-i18n="portfolio.filterData">Data Science</li>
+            <li data-filter=".filter-auto" data-i18n="portfolio.filterAutomation">Automation</li>
+            <li data-filter=".filter-gui" data-i18n="portfolio.filterMobile">Mobile Apps</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -338,7 +331,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
+        <h2 data-i18n="services.title">Services</h2>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -348,8 +341,8 @@
           <div class="col-lg-6 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-code-square"></i></div>
             <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Web Development</a></h4>
-              <p class="description">I will develop your desired web site using React.js/Next.js , Angular.js, FastAPI, Express.js and Nest.js.</p>
+              <h4 class="title"><a href="service-details.html" class="stretched-link" data-i18n="services.webTitle">Web Development</a></h4>
+              <p class="description" data-i18n="services.webDescription">I will develop your desired web site using React.js/Next.js , Angular.js, FastAPI, Express.js and Nest.js.</p>
             </div>
           </div>
           <!-- End Service Item -->
@@ -357,24 +350,24 @@
           <div class="col-lg-6 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-robot"></i></div>
             <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Automation</a></h4>
-              <p class="description">If your work feels repetitive, let me help you automate it with Selenium WebDriver bots and Python scripts.</p>
+              <h4 class="title"><a href="service-details.html" class="stretched-link" data-i18n="services.automationTitle">Automation</a></h4>
+              <p class="description" data-i18n="services.automationDescription">If your work feels repetitive, let me help you automate it with Selenium WebDriver bots and Python scripts.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-6 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="icon flex-shrink-0"><i class="bi bi-minecart-loaded"></i></div>
             <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Data Mining</a></h4>
-              <p class="description">Do not have an API to extract data? I can mine the data you need using tools such as BeautifulSoup, Scrapy, or Selenium.</p>
+              <h4 class="title"><a href="service-details.html" class="stretched-link" data-i18n="services.miningTitle">Data Mining</a></h4>
+              <p class="description" data-i18n="services.miningDescription">Do not have an API to extract data? I can mine the data you need using tools such as BeautifulSoup, Scrapy, or Selenium.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-6 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="icon flex-shrink-0"><i class="bi bi-bar-chart-line"></i></div>
             <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Data Analysis</a></h4>
-              <p class="description">I will analyze your desired data, provide insights, and model predictions by linear and multiple regression using Pandas, NumPy, Seaborn, and Scikit-learn.</p>
+              <h4 class="title"><a href="service-details.html" class="stretched-link" data-i18n="services.analysisTitle">Data Analysis</a></h4>
+              <p class="description" data-i18n="services.analysisDescription">I will analyze your desired data, provide insights, and model predictions by linear and multiple regression using Pandas, NumPy, Seaborn, and Scikit-learn.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -389,8 +382,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Career</h2>
-        <p>Explore some of the organizations that have relied on my expertise and skills throughout my professional career.</p>
+        <h2 data-i18n="career.title">Career</h2>
+        <p data-i18n="career.description">Explore some of the organizations that have relied on my expertise and skills throughout my professional career.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -492,8 +485,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Please don't hesitate to contact us if you are looking forward to working with us.</p>
+        <h2 data-i18n="contact.title">Contact</h2>
+        <p data-i18n="contact.description">Please don't hesitate to contact us if you are looking forward to working with us.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -506,8 +499,8 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h3>Address</h3>
-                  <p>Guatemala City, Guatemala</p>
+                  <h3 data-i18n="contact.addressTitle">Address</h3>
+                  <p data-i18n="about.cityValue">Guatemala City, Guatemala</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -523,7 +516,7 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Us</h3>
+                  <h3 data-i18n="contact.emailTitle">Email Us</h3>
                   <p>chepechay16@gmail.com</p>
                 </div>
               </div>
@@ -549,31 +542,31 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
+                  <label for="name-field" class="pb-2" data-i18n="contact.nameLabel">Your Name</label>
                   <input type="text" name="name" id="name-field" class="form-control" required="">
                 </div>
 
                 <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
+                  <label for="email-field" class="pb-2" data-i18n="contact.emailLabel">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email-field" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
+                  <label for="subject-field" class="pb-2" data-i18n="contact.subjectLabel">Subject</label>
                   <input type="text" class="form-control" name="subject" id="subject-field" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
+                  <label for="message-field" class="pb-2" data-i18n="contact.messageLabel">Message</label>
                   <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
+                  <div class="loading" data-i18n="contact.loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message" data-i18n="contact.sentMessage">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit" data-i18n="contact.submitButton">Send Message</button>
                 </div>
 
               </div>
@@ -614,7 +607,9 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
+  <script src="assets/js/translations.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
 
 </body>
 
